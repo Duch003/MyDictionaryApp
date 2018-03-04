@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +69,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -92,6 +103,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\about.png" />
+    <Resource Include="img\categories.png" />
+    <Resource Include="img\edit_dictionary.png" />
+    <Resource Include="img\random.png" />
+    <Resource Include="img\settings.png" />
+    <Resource Include="img\time.png" />
+    <Resource Include="img\whole_dictionary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\edit_category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\settings_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\speaker-mute.png" />
+    <Resource Include="img\speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\united-kingdom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

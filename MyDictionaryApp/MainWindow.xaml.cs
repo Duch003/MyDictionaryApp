@@ -24,5 +24,21 @@ namespace MyDictionaryApp
         {
             InitializeComponent();
         }
+
+        private void Menu_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Menu_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            var settingsWindow = new Settings();
+            settingsWindow.Show();
+        }
     }
 }
