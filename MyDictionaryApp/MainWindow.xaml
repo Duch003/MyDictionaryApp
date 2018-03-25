@@ -34,65 +34,65 @@
 		</Grid.ColumnDefinitions>
 
 		<!--Random set Button-->
-		<Button Grid.Row="1" Grid.Column="1" Style="{StaticResource SquareButton}" >
+		<Button Grid.Row="1" Grid.Column="1" Style="{StaticResource Button_TileStyle}" Click="RandomVocabSet_Click" >
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Random Vocab Set</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Random Vocab Set</TextBlock>
 				<Image Source="img/random.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--Particular category-->
-		<Button Grid.Row="2" Grid.Column="1" Style="{StaticResource SquareButton}">
+		<Button Grid.Row="2" Grid.Column="1" Style="{StaticResource Button_TileStyle}" Click="ParticularCategory_Click">
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Particular Category</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Particular Category</TextBlock>
 				<Image Source="img/categories.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--Time Challange-->
-		<Button  Grid.Row="1" Grid.Column="2" Style="{StaticResource SquareButton}">
+		<Button  Grid.Row="1" Grid.Column="2" Style="{StaticResource Button_TileStyle}" Click="TimeChallange_Click">
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Time Challange</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Time Challange</TextBlock>
 				<Image Source="img/time.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--Whole dictionary-->
-		<Button Grid.Row="2" Grid.Column="2"  Style="{StaticResource SquareButton}">
+		<Button Grid.Row="2" Grid.Column="2"  Style="{StaticResource Button_TileStyle}" Click="WholeDictionary_Click">
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Whole Dictionary</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Whole Dictionary</TextBlock>
 				<Image Source="img/whole_dictionary.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--Edit dictionary-->
-		<Button Grid.Row="1" Grid.Column="4"  Style="{StaticResource SquareButton}">
+		<Button Grid.Row="1" Grid.Column="4"  Style="{StaticResource Button_TileStyle}" Click="EditDictionary_Click">
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Edit Dictionary</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Edit Dictionary</TextBlock>
 				<Image Source="img/edit_dictionary.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--Settings-->
-		<Button Grid.Row="2" Grid.Column="4" Style="{StaticResource SquareButton}" Click="Settings_Click">
+		<Button Grid.Row="2" Grid.Column="4" Style="{StaticResource Button_TileStyle}" Click="Settings_Click">
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Settings</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Settings</TextBlock>
 				<Image Source="img/settings.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--Edit Categories-->
-		<Button Grid.Row="1" Grid.Column="5" Style="{StaticResource SquareButton}" MouseEnter="Menu_MouseEnter" MouseLeave="Menu_MouseLeave">
+		<Button Grid.Row="1" Grid.Column="5" Style="{StaticResource Button_TileStyle}" Click="EditCategories_Click" >
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">Edit Categories</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">Edit Categories</TextBlock>
 				<Image Source="img/edit_category.png"></Image>
 			</DockPanel>
 		</Button>
 
 		<!--About-->
-		<Button Grid.Row="2" Grid.Column="5"  Style="{StaticResource SquareButton}">
+		<Button Grid.Row="2" Grid.Column="5"  Style="{StaticResource Button_TileStyle}" Click="About_Click">
 			<DockPanel>
-				<TextBlock DockPanel.Dock="Top" Style="{StaticResource Header}">About</TextBlock>
+				<TextBlock DockPanel.Dock="Top" Style="{StaticResource TextBlock_Header}">About</TextBlock>
 				<Image Source="img/about.png"></Image>
 			</DockPanel>
 		</Button>

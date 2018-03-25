@@ -34,8 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.7\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,9 +60,60 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssingCategory.xaml.cs">
+      <DependentUpon>AssingCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Category.cs" />
+    <Compile Include="CategoryManager.xaml.cs">
+      <DependentUpon>CategoryManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="classes\DatabaseManager.cs" />
+    <Compile Include="classes\Exceptions.cs" />
+    <Compile Include="DictionaryManager.xaml.cs">
+      <DependentUpon>DictionaryManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces\ICategoryList.cs" />
+    <Compile Include="interfaces\IQuestionDataPack.cs" />
+    <Compile Include="LogInWindow.xaml.cs">
+      <DependentUpon>LogInWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainGameBoard.xaml.cs">
+      <DependentUpon>MainGameBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Question.cs" />
+    <Compile Include="Result.xaml.cs">
+      <DependentUpon>Result.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AssingCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CategoryManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DictionaryManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogInWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainGameBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +126,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Result.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +157,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -108,26 +170,48 @@
     <Resource Include="img\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\about.png" />
-    <Resource Include="img\categories.png" />
-    <Resource Include="img\edit_dictionary.png" />
-    <Resource Include="img\random.png" />
-    <Resource Include="img\settings.png" />
-    <Resource Include="img\time.png" />
-    <Resource Include="img\whole_dictionary.png" />
+    <Resource Include="icons\about.png" />
+    <Resource Include="icons\categories.png" />
+    <Resource Include="icons\edit_dictionary.png" />
+    <Resource Include="icons\random.png" />
+    <Resource Include="icons\settings.png" />
+    <Resource Include="icons\time.png" />
+    <Resource Include="icons\whole_dictionary.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\edit_category.png" />
+    <Resource Include="icons\edit_category.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\settings_icon.ico" />
+    <Resource Include="icons\settings_icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\speaker-mute.png" />
-    <Resource Include="img\speaker.png" />
+    <Resource Include="icons\speaker-mute.png" />
+    <Resource Include="icons\speaker.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\united-kingdom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\default_picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bridge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Bedales-Memorial-Library-England.jpg" />
+    <Resource Include="img\VocabManagLibrary.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bigben.jpeg" />
+    <Resource Include="img\bridge1.jpg" />
+    <Resource Include="img\double_decker.jpg" />
+    <Resource Include="img\london-affiliazione.jpg" />
+    <Resource Include="img\London_Eye_Twilight.jpg" />
+    <Resource Include="img\london_eye_view.jpg" />
+    <Resource Include="img\london_view.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\LogInScreen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
